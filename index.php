@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anthony | Professional Portfolio</title>
+    <!-- title logo -->
+    <link rel="icon" type="image/png" href="logo.jpg" class="rounded">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+</head>
+<body class="font-sans antialiased transition-colors duration-300 dark">
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Page scroll progress"></div>
+
+    <!-- Header & Navigation -->
+    <header class="fixed w-full z-50 bg-background-dark/80 backdrop-blur-sm shadow-lg transition-colors duration-300" role="navigation" aria-label="Main Navigation">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#hero" class="flex items-center text-2xl font-bold text-primary-color hover:text-secondary-color transition-colors duration-300" aria-label="Go to Home section">
+                <!-- Logo inspired by image_d4a00b.png (top left corner) -->
+                <img src="logo.jpg" alt="Portfolio Logo" class="nav-logo-image" loading="lazy">
+                ANTHONY
+            </a>
+            <div class="hidden md:flex items-center space-x-6 nav-links">
+                <a href="#about" class="py-2 relative inline-block text-text-dark hover:text-primary-color transition-colors duration-300 after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:w-1/2 after:h-[2px] after:bg-[#dc4d00ff] after:-translate-x-1/2 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300" aria-label="About Me section">About</a>
+                <a href="#services" class="py-2 relative inline-block text-text-dark hover:text-primary-color transition-colors duration-300 after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:w-1/2 after:h-[2px] after:bg-[#dc4d00ff] after:-translate-x-1/2 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300" aria-label="My Services section">Services</a>
+                <a href="#skills" class="py-2 relative inline-block text-text-dark hover:text-primary-color transition-colors duration-300 after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:w-1/2 after:h-[2px] after:bg-[#dc4d00ff] after:-translate-x-1/2 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300" aria-label="My Skills section">Skills</a>
+                <a href="#portfolio" class="py-2 relative inline-block text-text-dark hover:text-primary-color transition-colors duration-300 after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:w-1/2 after:h-[2px] after:bg-[#dc4d00ff] after:-translate-x-1/2 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300" aria-label="My Portfolio section">Portfolio</a>
+                <a href="#dashboard-insights" class="py-2 relative inline-block text-text-dark hover:text-primary-color transition-colors duration-300 after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:w-1/2 after:h-[2px] after:bg-[#dc4d00ff] after:-translate-x-1/2 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300" aria-label="Dashboard Insights section">Insights</a>
+                <a href="#experience" class="py-2 relative inline-block text-text-dark hover:text-primary-color transition-colors duration-300 after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:w-1/2 after:h-[2px] after:bg-[#dc4d00ff] after:-translate-x-1/2 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300" aria-label="Experience and Education section">Experience</a>
+                <a href="#contact" class="py-2 relative inline-block text-text-dark hover:text-primary-color transition-colors duration-300 after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:w-1/2 after:h-[2px] after:bg-[#dc4d00ff] after:-translate-x-1/2 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300" aria-label="Contact Me section">Contact Us</a>
+                <!-- Removed theme toggle button as per request -->
+            </div>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden flex items-center">
+                <!-- Removed mobile theme toggle button as per request -->
+                <button id="mobile-menu-button" class="text-text-dark focus:outline-none" aria-label="Open mobile navigation menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Navigation Links -->
+        <div id="mobile-nav-links" class="nav-links md:hidden transition-all duration-300 ease-in-out hidden">
+            <a href="#about" class="block py-2 px-4 text-text-dark hover:text-primary-color transition-colors duration-300 after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:w-1/2 after:h-[2px] after:bg-[#dc4d00ff] after:-translate-x-1/2 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300" aria-label="About Me section (mobile)">About</a>
+            <a href="#services" class="block py-2 px-4 text-text-dark hover:text-primary-color transition-colors duration-300 after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:w-1/2 after:h-[2px] after:bg-[#dc4d00ff] after:-translate-x-1/2 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300" aria-label="My Services section (mobile)">Services</a>
+            <a href="#skills" class="block py-2 px-4 text-text-dark hover:text-primary-color transition-colors duration-300 after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:w-1/2 after:h-[2px] after:bg-[#dc4d00ff] after:-translate-x-1/2 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300" aria-label="My Skills section (mobile)">Skills</a>
+            <a href="#portfolio" class="block py-2 px-4 text-text-dark hover:text-primary-color transition-colors duration-300 after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:w-1/2 after:h-[2px] after:bg-[#dc4d00ff] after:-translate-x-1/2 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300" aria-label="My Portfolio section (mobile)">Portfolio</a>
+            <a href="#dashboard-insights" class="block py-2 px-4 text-text-dark hover:text-primary-color transition-colors duration-300 after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:w-1/2 after:h-[2px] after:bg-[#dc4d00ff] after:-translate-x-1/2 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300" aria-label="Dashboard Insights section (mobile)">Insights</a>
+            <a href="#experience" class="block py-2 px-4 text-text-dark hover:text-primary-color transition-colors duration-300 after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:w-1/2 after:h-[2px] after:bg-[#dc4d00ff] after:-translate-x-1/2 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300" aria-label="Experience and Education section (mobile)">Experience</a>
+            <a href="#contact" class="block py-2 px-4 text-text-dark hover:text-primary-color transition-colors duration-300" aria-label="Contact Me section (mobile)">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section (Inspired by image_d4a00b.png) -->
+        <section id="hero" class="relative h-screen flex items-center justify-center text-center bg-gradient-hero overflow-hidden px-4 md:px-0">
+            <!-- Canvas for particle background -->
+            <canvas id="particle-canvas" class="absolute inset-0 z-0"></canvas>
+            <div class="z-10 animate-fadeInScale flex flex-col items-center md:flex-row md:justify-center md:text-left w-full max-w-6xl mx-auto">
+                <div class="w-100 md:w-1/2 md:pr-8 mb-8 md:mb-0">
+                    <h1 class="text-2xl md:text-6xl font-extrabold text-white leading-tight mb-4">
+                        Hi, I'm <span class="text-secondary-color">Anthony</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-text-dark mb-8">
+                        A dedicated <span class="font-500 text-primary-color">UI/UX Designer</span> , <span class="font-500 text-primary-color">Website Developer</span> crafting impactful & innovative websites.
+                    </p>
+                    <a href="tel:+63 963-179-8554" class="btn-primary py-3 px-8 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105" aria-label="Contact Me">
+                        Contact <i class="fas fa-paper-plane ml-2" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div class="md:w-1/2 flex justify-center md:justify-end relative">
+                    <!-- Image inspired by image_d4a00b.png -->
+                    <iframe 
+                        src="https://lottie.host/embed/7160bb91-3a31-4ddf-a2f8-cfd4e98e7957/1WcFdMZYuC.lottie" 
+                        class="w-full md:w-50 h-80 border-0" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+            <!-- Social Icons and Website name at bottom left/right, inspired by image_d4a00b.png -->
+            <div class="absolute bottom-8 left-8 flex space-x-4 z-20">
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="text-text-dark hover:text-primary-color transition-colors duration-300 text-2xl" aria-label="LinkedIn Profile">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="https://github.com/yourprofile" target="_blank" class="text-text-dark hover:text-primary-color transition-colors duration-300 text-2xl" aria-label="GitHub Profile">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+                <a href="https://behance.net/yourprofile" target="_blank" class="text-text-dark hover:text-primary-color transition-colors duration-300 text-2xl" aria-label="Behance Profile">
+                    <i class="fab fa-behance" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="absolute bottom-8 right-8 z-20">
+                <a href="#" class="text-text-dark text-sm"></a>
+            </div>
+        </section>
+        
+        <!-- About Section (Inspired by image_d4a7a9.png) -->
+        <section id="about" class="py-16 md:py-24 bg-dark-purple-bg animate-fadeInScale text-text-dark">
+            <div class="container mx-auto px-4 md:px-8">
+                <!-- Top cards (Deeper Skillset, Creative Work, Strong Dedication) -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                    <div class="about-grid-card text-text-dark">
+                        <i class="fas fa-cubes text-primary-dark text-4xl mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Deeper Skillset</h3>
+                        <p class="text-sm">Possessing a comprehensive array of technical proficiencies for diverse project requirements.</p>
+                    </div>
+                    <div class="about-grid-card text-text-dark">
+                        <i class="fas fa-lightbulb text-secondary-dark text-4xl mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Creative Work</h3>
+                        <p class="text-sm">Delivering innovative and aesthetically refined solutions through a creative development approach.</p>
+                    </div>
+                    <div class="about-grid-card text-text-dark">
+                        <i class="fas fa-heart text-primary-dark text-4xl mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Strong Dedication</h3>
+                        <p class="text-sm">Committed to project success with unwavering dedication to quality and client satisfaction.</p>
+                    </div>
+                </div>
+
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-secondary-color">A Passionate Developer Who Loves to Code</h2>
+                <div class="flex flex-col lg:flex-row items-center gap-8">
+                    <div class="lg:w-1/2 flex flex-col md:flex-row items-center justify-center gap-6 animate-slideInLeft">
+                        <div class="relative w-50">
+                            <img src="myprofile.jpg" alt="Developer working" class="about-main-image w-100 max-w-sm h-auto object-cover" loading="lazy">
+                            <div class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-primary-dark text-white py-2 px-4 rounded-md shadow-lg text-sm font-semibold whitespace-nowrap">
+                                2 Successful Years
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 gap-4 w-full max-w-xs md:max-w-none md:flex-1">
+                            <div class="bg-card-bg-dark about-statistic-card p-4 rounded-lg shadow-md flex items-center">
+                                <i class="fas fa-laptop-code text-primary-dark text-3xl mr-4"></i>
+                                <div>
+                                    <p class="text-2xl font-bold">20+</p>
+                                    <p class="text-sm text-gray-400">Digital Products</p>
+                                </div>
+                            </div>
+                            <div class="bg-card-bg-dark about-statistic-card p-4 rounded-lg shadow-md flex items-center">
+                                <i class="fas fa-users text-secondary-dark text-3xl mr-4"></i>
+                                <div>
+                                    <p class="text-2xl font-bold">20+</p>
+                                    <p class="text-sm text-gray-400">Direct Clients</p>
+                                </div>
+                            </div>
+                            <div class="bg-card-bg-dark about-statistic-card p-4 rounded-lg shadow-md flex items-center">
+                                <i class="fas fa-project-diagram text-primary-dark text-3xl mr-4"></i>
+                                <div>
+                                    <p class="text-2xl font-bold">5+</p>
+                                    <p class="text-sm text-gray-400">Total Projects</p>
+                                </div>
+                            </div>
+                             <div class="bg-card-bg-dark about-statistic-card p-4 rounded-lg shadow-md flex items-center">
+                                <i class="fas fa-code-branch text-secondary-dark text-3xl mr-4"></i>
+                                <div>
+                                    <p class="text-2xl font-bold">8M+</p>
+                                    <p class="text-sm text-gray-400">Lines of Code</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 text-center lg:text-left animate-slideInRight">
+                        <h3 class="text-2xl font-bold text-primary-color mb-4">My Biography</h3>
+                        <p class="text-lg mb-6 leading-relaxed">
+                            With a career spanning 2 years, I have cultivated a junior level skill set in web development, focusing on delivering high-quality, scalable, and visually compelling web applications. My methodology integrates agile practices with meticulous attention to detail, ensuring optimal project outcomes.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-6">
+                            <div><strong class="mr-2">Name:</strong>Anthony D. Arisgado</div>
+                            <div><strong class="mr-2">Address:</strong>Cavite, Philippines</div>
+                            <div><strong class="mr-2">Email:</strong>arisgadoanthony5@gmail.com</div>
+                            <div><strong class="mr-2">DOB:</strong> August 13, 2003</div>
+                            <div><strong class="mr-2">Phone:</strong> +63 962-179-8554</div>
+                            <div><strong class="mr-2">Freelance:</strong> Available</div>
+                        </div>
+                        <a href="#" class="btn-primary py-2 px-6 rounded-full text-md font-semibold transition-all duration-300 hover:scale-105" aria-label="Download My Biography">
+                            Download Biography <i class="fas fa-download ml-2" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section (Inspired by image_d4fe7f.png) -->
+        <section id="services" class="py-16 md:py-24 bg-card-bg-dark animate-fadeInScale">
+            <div class="container mx-auto px-4 md:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-green-accent-light">What I Will Be For You: Services</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Service Card 1: UI & UX Design -->
+                    <div class="service-card-image5 p-8 rounded-lg shadow-md highlighted animate-fadeInScale transition-transform duration-300 hover:scale-105">
+                        <div class="flex flex-col items-center text-center">
+                            <i class="fas fa-lightbulb text-6xl mb-6"></i>
+                            <p class="text-xs font-bold uppercase mb-2">50+ Projects</p>
+                            <h3 class="text-2xl font-bold mb-4">UI & UX Design</h3>
+                            <p class="text-sm leading-relaxed">Create project plan, Data analysis, wireframes, Style guide, Responsiveness, User Testing and Mock-up Designs.</p>
+                        </div>
+                    </div>
+                    <!-- Service Card 2: Graphic Design -->
+                    <div class="service-card-image5 p-8 rounded-lg shadow-md animate-fadeInScale transition-transform duration-300 hover:scale-105" style="animation-delay: 0.1s;">
+                        <div class="flex flex-col items-center text-center">
+                            <i class="fas fa-layer-group text-6xl text-primary-color mb-6"></i>
+                            <p class="text-xs font-bold uppercase text-gray-400 mb-2">50+ Projects</p>
+                            <h3 class="text-2xl font-bold text-text-dark mb-4">Graphic Design</h3>
+                            <p class="text-sm leading-relaxed text-text-dark">Develop visual concepts, logos, branding elements, and high-quality digital assets for various platforms.</p>
+                        </div>
+                    </div>
+                    <!-- Service Card 3: Web Design -->
+                    <div class="service-card-image5 p-8 rounded-lg shadow-md animate-fadeInScale transition-transform duration-300 hover:scale-105" style="animation-delay: 0.2s;">
+                        <div class="flex flex-col items-center text-center">
+                            <i class="fas fa-laptop-code text-6xl text-primary-color mb-6"></i>
+                            <p class="text-xs font-bold uppercase text-gray-400 mb-2">3+ Projects</p>
+                            <h3 class="text-2xl font-bold text-text-dark mb-4">Web Design</h3>
+                            <p class="text-sm leading-relaxed text-text-dark">Translate design mockups into functional, responsive, and cross-browser compatible web experiences.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section (Inspired by image_d4ac02.jpg with icons and percentages) -->
+        <section id="skills" class="py-16 md:py-24 bg-animated-gradient animate-fadeInScale">
+            <div class="container mx-auto px-4 md:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-secondary-color">I Work Hard to Improve My Skills Regularly</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-8">
+                    <!-- Software Skills / Programming Languages -->
+                    <div>
+                        <h3 class="skill-group-heading">Software & Programming Skills</h3>
+                        <div class="space-y-4">
+                            <div class="skill-list-item">
+                                <i class="fab fa-html5 skill-icon" style="color: var(--color-html);"></i><span>HTML & CSS</span>
+                                <div class="skill-bar-outer" data-progress="95%">
+                                    <div class="skill-bar-inner" style="background-color: var(--color-html);"></div>
+                                    <span class="skill-percentage">95%</span>
+                                </div>
+                            </div>
+                            <div class="skill-list-item">
+                                <i class="fab fa-js-square skill-icon" style="color: var(--color-javascript);"></i><span>JavaScript (ES6+)</span>
+                                <div class="skill-bar-outer" data-progress="50%">
+                                    <div class="skill-bar-inner" style="background-color: var(--color-javascript);"></div>
+                                    <span class="skill-percentage">50%</span>
+                                </div>
+                            </div>
+                            <div class="skill-list-item">
+                                <i class="fab fa-react skill-icon" style="color: var(--color-react);"></i><span>React.js</span>
+                                <div class="skill-bar-outer" data-progress="15%">
+                                    <div class="skill-bar-inner" style="background-color: var(--color-react);"></div>
+                                    <span class="skill-percentage">15%</span>
+                                </div>
+                            </div>
+                            <div class="skill-list-item">
+                                <i class="fab fa-node-js skill-icon" style="color: var(--color-node);"></i><span>Node.js</span>
+                                <div class="skill-bar-outer" data-progress="50%">
+                                    <div class="skill-bar-inner" style="background-color: var(--color-node);"></div>
+                                    <span class="skill-percentage">50%</span>
+                                </div>
+                            </div>
+                            <div class="skill-list-item">
+                                <i class="fab fa-python skill-icon" style="color: var(--color-python);"></i><span>Python</span>
+                                <div class="skill-bar-outer" data-progress="5%">
+                                    <div class="skill-bar-inner" style="background-color: var(--color-python);"></div>
+                                    <span class="skill-percentage">5%</span>
+                                </div>
+                            </div>
+                            <div class="skill-list-item">
+                                <i class="fas fa-database skill-icon" style="color: var(--color-database);"></i><span>SQL</span>
+                                <div class="skill-bar-outer" data-progress="85%">
+                                    <div class="skill-bar-inner" style="background-color: var(--color-database);"></div>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Design Skills / What I Can Do / Hobbies -->
+                    <div>
+                        <h3 class="skill-group-heading">Design & Conceptual Skills</h3>
+                        <div class="space-y-4 mb-8">
+                            <div class="skill-list-item">
+                                <i class="fas fa-palette skill-icon" style="color: var(--color-uiux);"></i><span>UI/UX Design</span>
+                                <div class="skill-bar-outer" data-progress="50%">
+                                    <div class="skill-bar-inner" style="background-color: var(--color-uiux);"></div>
+                                    <span class="skill-percentage">50%</span>
+                                </div>
+                            </div>
+                            <div class="skill-list-item">
+                                <i class="fas fa-vector-square skill-icon" style="color: var(--color-graphic);"></i><span>Graphic Design</span>
+                                <div class="skill-bar-outer" data-progress="80%">
+                                    <div class="skill-bar-inner" style="background-color: var(--color-graphic);"></div>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
+                            </div>
+                            <div class="skill-list-item">
+                                <i class="fas fa-lightbulb skill-icon" style="color: var(--color-branding);"></i><span>Branding & Identity</span>
+                                <div class="skill-bar-outer" data-progress="40%">
+                                    <div class="skill-bar-inner" style="background-color: var(--color-branding);"></div>
+                                    <span class="skill-percentage">40%</span>
+                                </div>
+                            </div>
+                            <div class="skill-list-item">
+                                <i class="fas fa-pencil-ruler skill-icon" style="color: var(--color-prototyping);"></i><span>Prototyping & Wireframing</span>
+                                <div class="skill-bar-outer" data-progress="20%">
+                                    <div class="skill-bar-inner" style="background-color: var(--color-prototyping);"></div>
+                                    <span class="skill-percentage">20%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="skill-group-heading">Interests & Activities</h3>
+                        <div class="flex flex-wrap gap-4 text-text-dark">
+                            <span class="bg-card px-4 py-2 rounded-full text-sm shadow-sm flex items-center"><i class="fas fa-book mr-2"></i> Reading</span>
+                            <span class="bg-card px-4 py-2 rounded-full text-sm shadow-sm flex items-center"><i class="fas fa-camera mr-2"></i> Photography</span>
+                            <span class="bg-card px-4 py-2 rounded-full text-sm shadow-sm flex items-center"><i class="fas fa-paint-brush mr-2"></i> Digital Art</span>
+                            <span class="bg-card px-4 py-2 rounded-full text-sm shadow-sm flex items-center"><i class="fas fa-plane mr-2"></i> Travel</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="py-16 md:py-24 bg-card-bg-dark animate-fadeInScale">
+            <div class="container mx-auto px-4 md:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-primary-color">Distinguished Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project Card 1 -->
+                    <div class="bg-card rounded-lg overflow-hidden shadow-lg border border-border-dark animate-fadeInScale transition-transform duration-300 hover:scale-105">
+                        <img src="votingsystem-web.jpg" alt="Project 1: Enterprise E-commerce Platform" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-text-dark mb-2">SBO Election E-Voting Website</h3>
+                            <p class="text-text-dark text-sm mb-4">Developed a mid-level performance e-voting election website with integrated databases and real-time results including results and voted record email notifications.</p>
+                            <a href="#" target="_blank" class="text-secondary-color hover:text-primary-color text-sm font-semibold transition-colors duration-300" aria-label="View Project: Enterprise E-commerce Platform">View Project <i class="fas fa-external-link-alt ml-1" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <!-- Project Card 2 -->
+                    <div class="bg-card rounded-lg overflow-hidden shadow-lg border border-border-dark animate-fadeInScale transition-transform duration-300 hover:scale-105" style="animation-delay: 0.1s;">
+                        <img src="escallationmatrix-web.jpg" alt="Project 2: Secure Real-time Communication App" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-text-dark mb-2">Escallation Matrix</h3>
+                            <p class="text-text-dark text-sm mb-4">An office type website where you can organize and manage teams to track every records of their members with realtime data and notifications.</p>
+                            <a href="#" target="_blank" class="text-secondary-color hover:text-primary-color text-sm font-semibold transition-colors duration-300" aria-label="View Project: Secure Real-time Communication App">View Project <i class="fas fa-external-link-alt ml-1" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <!-- Project Card 3 -->
+                    <div class="bg-card rounded-lg overflow-hidden shadow-lg border border-border-dark animate-fadeInScale transition-transform duration-300 hover:scale-105" style="animation-delay: 0.2s;">
+                        <img src="servpro-web.jpg" alt="Project 3: AI-Powered Content Management" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-text-dark mb-2">SERVPRO Company Website</h3>
+                            <p class="text-text-dark text-sm mb-4">Designed, Developed and implemented a personal company website that provide realtime events and lets clients view their personal accounts, track their transactions, create schedules and inquiry with realtime notifications.</p>
+                            <a href="https://servproph.com" target="_blank" class="text-secondary-color hover:text-primary-color text-sm font-semibold transition-colors duration-300" aria-label="View Project: AI-Powered Content Management">View Project <i class="fas fa-external-link-alt ml-1" aria-hidden="true"></i></a>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </section>
+
+        <!-- Dashboard Insights Section -->
+        <section id="dashboard-insights" class="py-16 md:py-24 bg-animated-gradient animate-fadeInScale">
+            <div class="container mx-auto px-4 md:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-primary-color">Data-Driven Insights & Dashboard Designs</h2>
+                <p class="text-lg text-text-dark text-center mb-10 max-w-3xl mx-auto">
+                    Showcasing proficiency in designing intuitive dashboards and visualizing complex data to provide actionable insights. These are conceptual designs reflecting data presentation capabilities.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
+                    <!-- Dashboard Card 2: User Engagement (Line Chart concept) -->
+                    <div class="bg-card p-6 rounded-lg shadow-md border border-border-dark animate-fadeInScale transition-transform duration-300 hover:scale-105" style="animation-delay: 0.1s;">
+                        <h3 class="text-xl font-semibold text-text-dark mb-4">Monthly User Engagement</h3>
+                        <div class="relative h-32 w-full">
+                            <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                <polyline fill="none" class="stroke-primary-dark stroke-2" points="0,80 20,40 40,60 60,30 80,50 100,20"></polyline>
+                                <circle cx="0" cy="80" r="3" fill="var(--primary-dark)"></circle>
+                                <circle cx="20" cy="40" r="3" fill="var(--primary-dark)"></circle>
+                                <circle cx="40" cy="60" r="3" fill="var(--primary-dark)"></circle>
+                                <circle cx="60" cy="30" r="3" fill="var(--primary-dark)"></circle>
+                                <circle cx="80" cy="50" r="3" fill="var(--primary-dark)"></circle>
+                                <circle cx="100" cy="20" r="3" fill="var(--primary-dark)"></circle>
+                            </svg>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-4">Visual representation of active user sessions, showing increasing engagement over time.</p>
+                    </div>
+
+                    <!-- Dashboard Card 3: Project Status (Pie Chart) -->
+                    <div class="bg-card p-6 rounded-lg shadow-md border border-border-dark animate-fadeInScale transition-transform duration-300 hover:scale-105" style="animation-delay: 0.2s;">
+                        <h3 class="text-xl font-semibold text-text-dark mb-4">Current Project Allocation</h3>
+                        <div class="flex justify-center items-center">
+                            <div class="chart-pie"></div>
+                            <ul class="ml-4 text-sm text-text-dark space-y-1">
+                                <li class="flex items-center"><span class="w-3 h-3 rounded-full bg-primary-dark mr-2"></span>30% Frontend</li>
+                                <li class="flex items-center"><span class="w-3 h-3 rounded-full bg-secondary-dark mr-2"></span>30% Backend</li>
+                                <li class="flex items-center"><span class="w-3 h-3 rounded-full bg-gray-600 mr-2"></span>20% UI/UX</li>
+                                <li class="flex items-center"><span class="w-3 h-3 rounded-full bg-primary-dark mr-2" style="background-color: #BF360C;"></span>20% Deployment</li>
+                            </ul>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-4">Breakdown of active project time allocation by development phase.</p>
+                    </div>
+
+                    <!-- Dashboard Card 4: Key Metrics (KPIs) -->
+                    <div class="bg-card p-6 rounded-lg shadow-md border border-border-dark animate-fadeInScale transition-transform duration-300 hover:scale-105" style="animation-delay: 0.3s;">
+                        <h3 class="text-xl font-semibold text-text-dark mb-4">Key Performance Indicators</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="text-center">
+                                <p class="text-3xl font-bold text-primary-color">3+</p>
+                                <p class="text-sm text-gray-400">Projects Completed</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-3xl font-bold text-secondary-color">95%</p>
+                                <p class="text-sm text-gray-400">Client Satisfaction</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-3xl font-bold text-primary-color">10,000k+</p>
+                                <p class="text-sm text-gray-400">Lines of Code</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-3xl font-bold text-secondary-color">10x</p>
+                                <p class="text-sm text-gray-400">Performance Gain</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-4">Key metrics highlighting the impact and efficiency of my personal work.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section (Inspired by image_d51f88.png) -->
+        <section id="testimonials" class="py-16 md:py-24 bg-animated-gradient animate-fadeInScale">
+            <div class="container mx-auto px-4 md:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-primary-color">Client Testimonials & Feedback</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Left Column: Overall Rating and Recent Feedbacks -->
+                    <div>
+                        <div class="flex flex-col md:flex-row gap-8 mb-8">
+                            <!-- Overall Rating Summary -->
+                            <div class="testimonial-overall-rating">
+                                <h3 class="text-5xl font-extrabold mb-2" style="color: var(--rating-text-color);">4.3</h3>
+                                <div class="star-rating text-3xl mb-2">
+                                    <i class="fas fa-star filled-star"></i>
+                                    <i class="fas fa-star filled-star"></i>
+                                    <i class="fas fa-star filled-star"></i>
+                                    <i class="fas fa-star filled-star"></i>
+                                    <i class="fas fa-star empty-star"></i>
+                                </div>
+                                <p class="text-sm text-gray-400">4 Ratings</p>
+                            </div>
+                            <!-- Rating Distribution Bars -->
+                            <div class="testimonial-rating-bar-container">
+                                <div class="rating-bar-item">
+                                    <span>FIVE</span>
+                                    <div class="star-rating text-sm mr-2">
+                                        <i class="fas fa-star filled-star"></i>
+                                    </div>
+                                    <div class="bar">
+                                        <div class="bar-fill" style="--bar-width: 90%;"></div>
+                                    </div>
+                                    <span class="count">2</span>
+                                </div>
+                                <div class="rating-bar-item">
+                                    <span>FOUR</span>
+                                    <div class="star-rating text-sm mr-2">
+                                        <i class="fas fa-star filled-star"></i>
+                                    </div>
+                                    <div class="bar">
+                                        <div class="bar-fill" style="--bar-width: 70%;"></div>
+                                    </div>
+                                    <span class="count">1</span>
+                                </div>
+                                <div class="rating-bar-item">
+                                    <span>THREE</span>
+                                    <div class="star-rating text-sm mr-2">
+                                        <i class="fas fa-star filled-star"></i>
+                                    </div>
+                                    <div class="bar">
+                                        <div class="bar-fill" style="--bar-width: 50%;"></div>
+                                    </div>
+                                    <span class="count">1</span>
+                                </div>
+                                <div class="rating-bar-item">
+                                    <span>TWO</span>
+                                    <div class="star-rating text-sm mr-2">
+                                        <i class="fas fa-star filled-star"></i>
+                                    </div>
+                                    <div class="bar">
+                                        <div class="bar-fill" style="--bar-width: 30%;"></div>
+                                    </div>
+                                    <span class="count">0</span>
+                                </div>
+                                <div class="rating-bar-item">
+                                    <span>ONE</span>
+                                    <div class="star-rating text-sm mr-2">
+                                        <i class="fas fa-star filled-star"></i>
+                                    </div>
+                                    <div class="bar">
+                                        <div class="bar-fill" style="--bar-width: 10%;"></div>
+                                    </div>
+                                    <span class="count">0</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-secondary-color mb-6">Recent Feedbacks</h3>
+                        <div class="space-y-6">
+                            <!-- Review Card 1 -->
+                            <div class="review-card flex items-start">
+                                <img src="https://placehold.co/50x50/F57C00/FFFFFF?text=R" alt="Reviewer Robert Karmazov" class="review-card-avatar">
+                                <div>
+                                    <p class="font-semibold text-text-dark">Dom</p>
+                                    <div class="star-rating text-xl my-1">
+                                        <i class="fas fa-star filled-star"></i>
+                                        <i class="fas fa-star filled-star"></i>
+                                        <i class="fas fa-star filled-star"></i>
+                                        <i class="fas fa-star filled-star"></i>
+                                        <i class="fas fa-star empty-star"></i>
+                                    </div>
+                                    <p class="text-sm text-gray-400">I'm very satisfied with the service and performance of the matrix.</p>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Add a Review Form -->
+                    <div class="lg:ml-8">
+                        <h3 class="text-2xl font-bold text-primary-color mb-6">Add a Review</h3>
+                        <form class="add-review-form space-y-4">
+                            <div>
+                                <label class="block text-text-dark text-sm font-bold mb-2">Add Your Rating</label>
+                                <div class="star-rating-input text-3xl" id="review-star-rating">
+                                    <i class="far fa-star star" data-value="1"></i>
+                                    <i class="far fa-star star" data-value="2"></i>
+                                    <i class="far fa-star star" data-value="3"></i>
+                                    <i class="far fa-star star" data-value="4"></i>
+                                    <i class="far fa-star star" data-value="5"></i>
+                                </div>
+                                <input type="hidden" id="user-rating" name="user_rating" value="0">
+                            </div>
+                            <div>
+                                <label for="reviewer-name" class="block text-text-dark text-sm font-bold mb-2">Name</label>
+                                <input type="text" id="reviewer-name" name="reviewer_name" class="w-full py-2 px-3 rounded-md border" placeholder="John Doe" required>
+                            </div>
+                            <div>
+                                <label for="reviewer-email" class="block text-text-dark text-sm font-bold mb-2">Email</label>
+                                <input type="email" id="reviewer-email" name="reviewer_email" class="w-full py-2 px-3 rounded-md border" placeholder="john.doe@example.com" required>
+                            </div>
+                            <div>
+                                <label for="review-text" class="block text-text-dark text-sm font-bold mb-2">Write Your Review</label>
+                                <textarea id="review-text" name="review_text" rows="5" class="w-full py-2 px-3 rounded-md border resize-y" placeholder="Write here..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary py-2 px-6 rounded-full text-md font-semibold hover:scale-105 transition-transform duration-300 w-full" style="background-color: var(--primary-dark);">
+                                Submit
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Education Section (Growth Arrow Timeline) -->
+        <section id="experience" class="py-16 md:py-24 bg-card-bg-dark animate-fadeInScale">
+            <div class="container mx-auto px-4 md:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-secondary-color">Professional Journey & Academia</h2>
+                <div class="timeline-container relative flex justify-between items-start">
+                    <div class="timeline-line"></div>
+
+                    <div class="timeline-node" data-detail="detail-job1">
+                        <div class="timeline-dot"><i class="fas fa-briefcase"></i></div>
+                        <p class="timeline-year">2022</p>
+                        <p class="timeline-title">Freshmen</p>
+                        <div id="detail-job1" class="timeline-detail-card relative z-10">
+                            <h4>Freshmen</h4>
+                            <p class="text-sm text-gray-400 mb-2">Granby Colleges of Science and Technology(GCST-1st Year)</p>
+                            <p>I started my cultivation in the coding world</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-node" data-detail="detail-job2">
+                        <div class="timeline-dot"><i class="fas fa-code"></i></div>
+                        <p class="timeline-year">2023</p>
+                        <p class="timeline-title">Frontend and Backend Specialist</p>
+                        <div id="detail-job2" class="timeline-detail-card relative z-10">
+                            <h4>Frontend and Backend Development Specialist</h4>
+                            <p class="text-sm text-gray-400 mb-2">Granby Colleges of Science and Technology(GCST-2nd Year)</p>
+                            <p>Developed highly responsive and dynamic user interfaces using HTML, CSS, and JavaScript, Figma ensuring robust integration with complex RESTful APIs.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-node" data-detail="detail-edu1">
+                        <div class="timeline-dot"><i class="fas fa-graduation-cap"></i></div>
+                        <p class="timeline-year">2024</p>
+                        <p class="timeline-title">Junior Website Developer</p>
+                        <div id="detail-edu1" class="timeline-detail-card relative z-10">
+                            <h4>Junior Website Developer</h4>
+                            <p class="text-sm text-gray-400 mb-2">Granby Colleges of Science and Technology(GCST-3rd Year)</p>
+                            <p>Graduated with distinction, with specialized coursework in advanced web technologies and software engineering principles.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-node" data-detail="detail-cert1">
+                        <div class="timeline-dot"><i class="fas fa-certificate"></i></div>
+                        <p class="timeline-year">2025</p>
+                        <p class="timeline-title">Website Developer</p>
+                        <div id="detail-cert1" class="timeline-detail-card relative z-10">
+                            <h4> Slightly Advanced Web Development</h4>
+                            <p class="text-sm text-gray-400 mb-2">SERVPRO Consolidated INC.(GCST-4th Year OJT)</p>
+                            <p>Completed an intensive, industry-recognized website program focusing on cutting-edge full-stack development methodologies.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action / Contact Section -->
+        <section id="contact" class="py-16 md:py-24 bg-animated-gradient text-center animate-fadeInScale" style="background-image: url('../components/images/bg3.jpg');" loading="lazy">
+            <div class="container mx-auto px-4 md:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-primary-color">Initiate a Collaboration</h2>
+                <p class="text-lg text-text-dark mb-10 max-w-2xl mx-auto">
+                    I am actively seeking innovative projects and impactful collaborations. For inquiries, project proposals, or professional discourse, kindly complete the form below or connect through my social channels.
+                </p>
+
+                <!-- Contact Form -->
+                <form class="max-w-xl mx-auto bg-card p-8 rounded-lg shadow-xl border border-border-dark">
+                    <div class="mb-6 text-left">
+                        <label for="name" class="block text-text-dark text-sm font-bold mb-2">Full Name</label>
+                        <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-3 px-4 leading-tight focus:outline-none focus:ring-2 focus:ring-primary-color" placeholder="Your Full Name" aria-label="Your Full Name" required>
+                    </div>
+                    <div class="mb-6 text-left">
+                        <label for="email" class="block text-text-dark text-sm font-bold mb-2">Professional Email</label>
+                        <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-3 px-4 leading-tight focus:outline-none focus:ring-2 focus:ring-primary-color" placeholder="youremail@example.com" aria-label="Your Professional Email" required>
+                    </div>
+                    <div class="mb-6 text-left">
+                        <label for="message" class="block text-text-dark text-sm font-bold mb-2">Detailed Message</label>
+                        <textarea id="message" name="message" rows="6" class="shadow appearance-none border rounded w-full py-3 px-4 leading-tight focus:outline-none focus:ring-2 focus:ring-primary-color resize-y" placeholder="Kindly provide details regarding your inquiry or project..." aria-label="Your Detailed Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary py-3 px-8 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105" aria-label="Send Message">
+                        Submit Inquiry <i class="fas fa-paper-plane ml-2" aria-hidden="true"></i>
+                    </button>
+                </form>
+
+                <div class="flex justify-center space-x-6 mt-10">
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank" class="text-text-dark hover:text-primary-color transition-colors duration-300 text-3xl" aria-label="LinkedIn Profile">
+                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://github.com/yourprofile" target="_blank" class="text-text-dark hover:text-primary-color transition-colors duration-300 text-3xl" aria-label="GitHub Profile">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://twitter.com/yourprofile" target="_blank" class="text-text-dark hover:text-primary-color transition-colors duration-300 text-3xl" aria-label="Twitter Profile">
+                        <i class="fab fa-twitter" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-card-bg-dark py-8 text-center text-text-dark text-sm border-t border-border-dark">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2025 Anthony Arisgado. All rights reserved.</p>
+            <p class="mt-2">Architected and Developed with <i class="fas fa-heart text-red-500" aria-hidden="true"></i> by Anthony Arisgado</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
+    <script src="main.js"></script>
+</body>
+</html>
