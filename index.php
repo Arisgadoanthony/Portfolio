@@ -21,7 +21,7 @@
     <div id="scroll-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Page scroll progress"></div>
 
     <!-- Header & Navigation -->
-    <header class="fixed w-100 z-50 p-2 bg-background-dark/80 backdrop-blur-sm shadow-lg transition-colors duration-300" role="navigation" aria-label="Main Navigation">
+    <header class="fixed w-full z-50 p-2 bg-background-dark/80 backdrop-blur-sm shadow-lg transition-colors duration-300" role="navigation" aria-label="Main Navigation">
         <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
             <a href="#hero" class="flex items-center text-2xl font-bold text-primary-color hover:text-secondary-color transition-colors duration-300" aria-label="Go to Home section">
                 <!-- Logo inspired by image_d4a00b.png (top left corner) -->
@@ -1017,6 +1017,7 @@
     </script>
 </body>
 </html>
+
 
 
 
